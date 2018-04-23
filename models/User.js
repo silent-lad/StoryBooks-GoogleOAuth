@@ -1,27 +1,26 @@
 const mongoose = require('mongoose');
-
 const Schema = mongoose.Schema;
 
-//Create Schema
+// Create Shema
 const UserSchema = new Schema({
   googleID:{
-    type: String,
+    type:String,
     required: true
   },
   email:{
     type: String,
     required: true
   },
-  firstName:{
-    type: String,
+  firstName: {
+    type: String
   },
   lastName: {
-    type: String,
+    type: String
   },
   image: {
-    type: String
+    type:String
   }
 });
 
-//Create Colection and UserSchema
-mongoose.model('user',UserSchema);
+// Create collection and add schema
+mongoose.model('users', UserSchema);
